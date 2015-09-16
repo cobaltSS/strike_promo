@@ -1,0 +1,28 @@
+body{
+    background-image: url("/static/1320444123_ranger-afghanistan-hr.jpg");
+    margin-left: 30px;
+}
+.users_list p{
+    margin-left: 20px;
+}
+.main_form{
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.navigation{
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+.navigation a{
+    margin-left: 5px;
+    color: green;
+    font-size: 16px;
+}
+.navigation a:hover{
+    text-decoration: none;
+    color: brown;
+    margin-top: 15px;
+}

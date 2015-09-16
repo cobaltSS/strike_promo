@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+{{ block.super }}
+<h1> Все участники </h1>
+{% for gammer in object_list %}
+    <div class="users_list">
+    <p> <span >{{ gammer.FirstName }}</span></p>
+    <p> <span>{{ gammer.LastName }}</span></p>
+    <p> <span>{{ gammer.Email }}</span></p>
+    <form action="{% url 'delete' pk=gammer.pk%}" method="post">{% csrf_token %}
+
+        <input type="submit" class="btn btn-danger" value="Отказаться" />
+    </form>
+    </div>
+    <span>------------------------------------</span>
+    {% empty %}
+    <p>Пока никто не записался</p>
+{% endfor %}
+{% endblock %}
