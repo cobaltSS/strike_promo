@@ -19,7 +19,7 @@
         <p> <span>a.namakarsky@itransition.com</span></p>
 
     <span>------------------------------------</span>
-    <h2> Участники</h2>
+    <h2> Участники (Пока всего - {{ object_list|length }})</h2>
 
 {% for gammer in object_list %}
 
@@ -35,5 +35,6 @@
     {% empty %}
     <p>Пока никто не записался</p>
 {% endfor %}
+
     </div>
 {% endblock %}
