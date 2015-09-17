@@ -4,6 +4,8 @@ body{
 }
 .users_list p{
     margin-left: 20px;
+    font-size: 16px;
+    font-style: oblique;
 }
 .main_form{
     width: 300px;
@@ -25,4 +27,7 @@ body{
     text-decoration: none;
     color: brown;
     margin-top: 15px;
+}
+.alert{
+    color: red;
 }

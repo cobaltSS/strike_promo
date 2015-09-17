@@ -1,9 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
 {{ block.super }}
+    <h2 class="alert">
+    Дорогие друзья!!! Огромная просьба - если вы записались и у вас <br> по каким-либо причином не получается поехать на мероприятие,<br>
+    обязательно сообщите об этом организатором в письме или иным способом.    </h2>
 <h1> Все участники </h1>
-{% for gammer in object_list %}
     <div class="users_list">
+    <h2> Организаторы</h2>
+
+        <p> <span >Сергей</span></p>
+        <p> <span>Савран</span></p>
+        <p> <span>s.savran@itransition.com</span></p>
+
+    <span>------------------------------------</span>
+
+        <p> <span >Андрей</span></p>
+        <p> <span>Намакарский</span></p>
+        <p> <span>a.namakarsky@itransition.com</span></p>
+
+    <span>------------------------------------</span>
+    <h2> Участники</h2>
+
+{% for gammer in object_list %}
+
     <p> <span >{{ gammer.FirstName }}</span></p>
     <p> <span>{{ gammer.LastName }}</span></p>
     <p> <span>{{ gammer.Email }}</span></p>
@@ -11,9 +30,10 @@
 {##}
 {#        <input type="submit" class="btn btn-danger" value="Отказаться" />#}
 {#    </form>#}
-    </div>
+
     <span>------------------------------------</span>
     {% empty %}
     <p>Пока никто не записался</p>
 {% endfor %}
+    </div>
 {% endblock %}
