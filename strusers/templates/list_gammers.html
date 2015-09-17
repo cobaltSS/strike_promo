@@ -7,10 +7,10 @@
     <p> <span >{{ gammer.FirstName }}</span></p>
     <p> <span>{{ gammer.LastName }}</span></p>
     <p> <span>{{ gammer.Email }}</span></p>
-    <form action="{% url 'delete' pk=gammer.pk%}" method="post">{% csrf_token %}
-
-        <input type="submit" class="btn btn-danger" value="Отказаться" />
-    </form>
+{#    <form action="{% url 'delete' pk=gammer.pk%}" method="post">{% csrf_token %}#}
+{##}
+{#        <input type="submit" class="btn btn-danger" value="Отказаться" />#}
+{#    </form>#}
     </div>
     <span>------------------------------------</span>
     {% empty %}
