@@ -7,9 +7,8 @@ class AllGammers(ListView):
     template_name = 'list_gammers.html'
     model = Gamers
     def get_context_data(self, **kwargs):
-        con = {}
+        con = super(AllGammers, self).get_context_data(**kwargs)
         con['g_count'] = len(self.object_list) + 2
-        print(kwargs)
         return con
 
 class MainPage(TemplateView):
