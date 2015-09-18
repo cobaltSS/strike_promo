@@ -6,6 +6,11 @@ from .forms import GamersForm
 class AllGammers(ListView):
     template_name = 'list_gammers.html'
     model = Gamers
+    def get_context_data(self, **kwargs):
+        con = {}
+        con['g_count'] = len(self.object_list) + 2
+        print(kwargs)
+        return con
 
 class MainPage(TemplateView):
     template_name = 'main_page.html'
