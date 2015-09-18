@@ -34,10 +34,11 @@ body{
     <p> <span >{{ gammer.FirstName }}</span></p>
     <p> <span>{{ gammer.LastName }}</span></p>
     <p> <span>{{ gammer.Email }}</span></p>
-    <form action="{% url 'delete' pk=gammer.pk%}" method="post">{% csrf_token %}
-
-        <input type="submit" class="btn btn-danger" value="Отказаться" />
-    </form>
+    <input type="hidden" value="{{ gammer.pk }}">
+{#    <form action="{% url 'delete' pk=gammer.pk%}" method="post">{% csrf_token %}#}
+{##}
+{#        <input type="submit" class="btn btn-danger" value="Отказаться" />#}
+{#    </form>#}
 
     <span>------------------------------------</span>
     {% empty %}
